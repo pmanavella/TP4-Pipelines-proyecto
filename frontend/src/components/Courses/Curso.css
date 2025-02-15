@@ -1,0 +1,256 @@
+/* Cursos.css */
+.container-curso {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  background: linear-gradient(135deg, #e3f2fd, #5e2a84);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60vw;
+  height: 60vh;
+  position: relative;
+}
+
+/* Estilo para el título principal */
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Estilo para el botón en la parte superior derecha */
+.boton-arriba-derecha {
+  background-color: violet;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-arriba-derecha:hover {
+  background-color: darkviolet;
+}
+
+.boton-arriba-derecha2 {
+  background-color: violet;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-arriba-derecha2:hover {
+  background-color: darkviolet;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+/* Estilo para el input de búsqueda */
+.busqueda {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilo para la grilla de cursos */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Estilo para cada curso */
+.card-curso {
+  background-color: #fff;
+  margin-top: 75px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: 100%;
+  height: 80%;
+}
+
+.card-curso:hover {
+  transform: scale(1.02);
+}
+
+/* Estilo para el título del curso */
+.card-curso h2 {
+  color: #b43396;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la descripción del curso */
+.card-curso p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el botón de inscripción */
+.card-curso button {
+  background-color: #862cb6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.card-curso div .inscripcion {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.card-curso:hover .inscripcion {
+  transform: scale(1.02);
+}
+.card-curso:hover button {
+  background-color: green !important;
+}
+
+.card-curso button:hover {
+  background-color: #b281cd;
+}
+
+
+.comments {
+  margin-top: 0px;
+}
+
+.comments-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.comments-container {
+  margin-top: 40px;
+}
+
+.comment-form-title {
+  font-size: 22px;
+}
+
+.comment-form-textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  border: 1px solid rgb(107, 114, 12);
+}
+
+.comment-form-button {
+  font-size: 16px;
+  padding: 8px 16px;
+  background: rgb(59, 130, 246);
+  border-radius: 8px;
+  color: white;
+}
+
+.comment-form-button:hover:enabled {
+  cursor: pointer;
+  background: rgb(37, 99, 235);
+}
+
+.comment-form-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.comment-form-cancel-button {
+  margin-left: 10px;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.comment-image-container {
+  margin-right: 12px;
+}
+
+.comment-image-container img {
+  border-radius: 50px;
+}
+
+.comment-right-part {
+  width: 100%;
+}
+
+.comment-content {
+  display: flex;
+}
+
+.comment-author {
+  margin-right: 8px;
+  font-size: 20px;
+  color: rgb(59, 130, 246);
+}
+
+.comment-text {
+  font-size: 18px;
+}
+
+.comment-actions {
+  display: flex;
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.comment-action {
+  margin-right: 8px;
+}
+
+.comment-action:hover {
+  text-decoration: underline;
+}
+
+.replies {
+  margin-top: 20px;
+}
+
+.comentario {
+  display: block;
+  min-width: 30%;
+  max-width: 60%;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.comentario-texto {
+  display: inline-block;
+}

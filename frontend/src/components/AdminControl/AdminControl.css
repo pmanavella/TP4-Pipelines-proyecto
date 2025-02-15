@@ -1,0 +1,111 @@
+/* Cursos.css /
+.container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #701C5D;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/ Estilo para el título principal /
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/ Estilo para el botón en la parte superior derecha /
+.boton-arriba-derecha {
+  background-color: violet;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-arriba-derecha:hover {
+  background-color: darkviolet;
+}
+
+
+.icon {
+  font-size: 24px;
+}
+
+/ Estilo para el input de búsqueda /
+.busqueda {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/ Estilo para la grilla de cursos /
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+/ Estilo para cada curso /
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  flex: 1 1 calc(33% - 40px);
+  max-width: calc(33% - 40px);
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/ Estilo para el título del curso /
+.card h2 {
+  color: #b43396;
+  margin-bottom: 10px;
+}
+
+/ Estilo para la descripción del curso /
+.card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/ Estilo para el botón de inscripción */
+.card button {
+    background-color: #862cb6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .card button:hover {
+    background-color: #b281cd;
+  }
+  
