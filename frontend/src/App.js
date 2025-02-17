@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/Home/Home.jsx';
 import LoginRegister from './components/LoginRegister/LoginRegister.jsx';
 import Cursos from './components/Courses/Cursos.jsx';
 import Curso from './components/Courses/Curso.jsx';
@@ -11,7 +12,8 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Cursos />} />
+          <Route path="/" element={<Home />} />
+          {/*<Route path="/" element={<Cursos /> />*/}
           <Route path="/users" element={<LoginRegister />} />
           <Route path="/courses" element={<Cursos />} />
           <Route path="/course/:id" element={<Curso />} />
