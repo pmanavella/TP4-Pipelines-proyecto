@@ -37,7 +37,8 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'gemplei','202cb962ac59075b964b07152d234b70',1),(2,'agus','202cb962ac59075b964b07152d234b70',0);
+INSERT INTO `users` VALUES (1,'luis','202cb962ac59075b964b07152d234b70',1),(2,'juan','202cb962ac59075b964b07152d234b70',0);
+
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -62,6 +63,9 @@ CREATE TABLE `courses` (
   `id_course` int NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `description` varchar(100) NOT NULL,
+  `duration` varchar(50) not null,
+	`instructor` varchar(255) not null,
+	`requirements` varchar(255),
   PRIMARY KEY (`id_course`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -72,7 +76,11 @@ CREATE TABLE `courses` (
 
 LOCK TABLES `courses` WRITE;
 /*!40000 ALTER TABLE `courses` DISABLE KEYS */;
-INSERT INTO `courses` VALUES (4,'ANIMAL','ito'),(5,'q','asd');
+
+INSERT INTO `courses`  VALUES (4,'Curso de Programacion','Curso inicial de C++', '3 meses', 'Juan', NULL),
+(5,'Curso de Java','Curso Avanzado de C++', '6 meses', 'Julio', 'C++ Basico');
+
+
 /*!40000 ALTER TABLE `courses` ENABLE KEYS */;
 UNLOCK TABLES;
 

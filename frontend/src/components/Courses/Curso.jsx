@@ -12,7 +12,7 @@ const Curso = () => {
     const navigate = useNavigate();
     const [inscripto, setInscripto] = useState(true);
     const [isAddModalOpen, setIsAddModalOpen] = useState(false);
-    const [curso, setCurso] = useState({id: '', name: '', description: ''});
+    const [curso, setCurso] = useState({id: '', name: '', description: '', duration: '', instructor:'', requirements:''});
     const [comment, setComment] = useState({id: '', id_user: '', text: '', id_course: id, created_at: ''});
     const [comments, setComments] = useState([
         {
@@ -164,6 +164,10 @@ const Curso = () => {
             <li className="card-curso">
                 <h2>{curso.name}</h2>
                 <p>{curso.description}</p>
+                <p>{curso.duration}</p>
+                <p>{curso.instructor}</p>
+                <p>{curso.requirements}</p>
+                
 
                 {comments.map((comment) => (
 

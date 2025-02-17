@@ -78,7 +78,7 @@ const Cursos = () => {
 
   return (
     <div className="container">
-      <h1>Cursos de Programación</h1>
+      <h1>C U R S O S</h1>
       <Link to='/MyCourses'>
         <button type="button" className="boton-arriba-derecha">
           <FaUserAlt className="icon" />
@@ -107,6 +107,7 @@ const Cursos = () => {
                 <h2>{curso.name}</h2>
               </Link>
               <p>{curso.description}</p>
+              <p>🕑{curso.duration}</p>
               <button onClick={() => inscripcion(curso)}>
                 Inscribirse
               </button>

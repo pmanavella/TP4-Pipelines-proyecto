@@ -12,6 +12,9 @@ func CreateCourse(request dto.CourseDto) (dto.CourseDto, e.ApiError) {
 
 	course.Name = request.Name
 	course.Description = request.Description
+	course.Duration = request.Duration
+	course.Instructor = request.Instructor
+	course.Requirements = request.Requirements
 
 	course, err := client.CreateCourse(course)
 	if err != nil {
@@ -29,6 +32,9 @@ func UpdateCourse(request dto.CourseDto) (dto.CourseDto, e.ApiError) {
 	course.Id_course = request.ID
 	course.Name = request.Name
 	course.Description = request.Description
+	course.Duration = request.Duration
+	course.Instructor = request.Instructor
+	course.Requirements = request.Requirements
 
 	course, err := client.UpdateCourse(course)
 	if err != nil {
@@ -58,15 +64,17 @@ func GetCoursesByUser(idUser int) ([]dto.CourseDto, e.ApiError) {
 	var coursesDto []dto.CourseDto
 	for _, course := range courses {
 		coursesDto = append(coursesDto, dto.CourseDto{
-			ID:          course.Id_course,
-			Name:        course.Name,
-			Description: course.Description,
+			ID:           course.Id_course,
+			Name:         course.Name,
+			Description:  course.Description,
+			Duration:     course.Duration,
+			Instructor:   course.Instructor,
+			Requirements: course.Requirements,
 		})
 	}
 
 	return coursesDto, nil
 }
-
 
 func GetCourseById(idCourse int) (dto.CourseDto, e.ApiError) {
 	var course model.Course
@@ -77,14 +85,15 @@ func GetCourseById(idCourse int) (dto.CourseDto, e.ApiError) {
 	}
 
 	var courseDto dto.CourseDto
-	courseDto.ID=  course.Id_course
-	courseDto.Name= course.Name
-	courseDto.Description= course.Description
-
+	courseDto.ID = course.Id_course
+	courseDto.Name = course.Name
+	courseDto.Description = course.Description
+	courseDto.Duration = course.Duration
+	courseDto.Instructor = course.Instructor
+	courseDto.Requirements = course.Requirements
 
 	return courseDto, nil
 }
-
 
 func GetCourses() ([]dto.CourseDto, e.ApiError) {
 	var courses []model.Course
@@ -97,9 +106,12 @@ func GetCourses() ([]dto.CourseDto, e.ApiError) {
 	var coursesDto []dto.CourseDto
 	for _, course := range courses {
 		coursesDto = append(coursesDto, dto.CourseDto{
-			ID:          course.Id_course,
-			Name:        course.Name,
-			Description: course.Description,
+			ID:           course.Id_course,
+			Name:         course.Name,
+			Description:  course.Description,
+			Duration:     course.Duration,
+			Instructor:   course.Instructor,
+			Requirements: course.Requirements,
 		})
 	}
 

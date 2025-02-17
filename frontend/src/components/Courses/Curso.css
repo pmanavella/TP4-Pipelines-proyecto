@@ -22,7 +22,7 @@ h1 {
 
 /* Estilo para el botón en la parte superior derecha */
 .boton-arriba-derecha {
-  background-color: violet;
+  background-color: #100c4eb4;
   color: white;
   border: none;
   width: 50px;
@@ -42,7 +42,7 @@ h1 {
 }
 
 .boton-arriba-derecha2 {
-  background-color: violet;
+  background-color: #100c4eb4;
   color: white;
   border: none;
   width: 50px;
@@ -103,7 +103,7 @@ h1 {
 
 /* Estilo para el título del curso */
 .card-curso h2 {
-  color: #b43396;
+  color: #100c4eb4;
   margin-bottom: 10px;
 }
 

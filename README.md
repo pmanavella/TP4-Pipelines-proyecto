@@ -1,1 +1,2 @@
-# FINALarqsot_I
+# ProyectoArqSoft
+Proyecto final Arq. de Software l - 2024
