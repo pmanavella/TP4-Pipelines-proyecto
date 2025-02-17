@@ -78,8 +78,8 @@ LOCK TABLES `courses` WRITE;
 /*!40000 ALTER TABLE `courses` DISABLE KEYS */;
 
 INSERT INTO `courses`  VALUES (4,'Curso de Programacion','Curso inicial de C++', '3 meses', 'Juan', NULL),
-(5,'Curso de Java','Curso Avanzado de C++', '6 meses', 'Julio', 'C++ Basico');
-
+(5,'Curso de Java','Curso Avanzado de C++', '6 meses', 'Julio', 'C++ Basico'), 
+(6,'Curso de Base de datos','Curso Inicial SQL', '9 meses', 'Leandro', 'MySQLWorkbench');
 
 /*!40000 ALTER TABLE `courses` ENABLE KEYS */;
 UNLOCK TABLES;
