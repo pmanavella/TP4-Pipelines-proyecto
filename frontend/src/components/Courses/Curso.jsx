@@ -197,7 +197,7 @@ const Curso = () => {
                 <ModalComponent isOpen={isAddModalOpen} onClose={handleCloseAddModal}>
                     <h2>Nuevo Comentario</h2>
 
-                    <textarea placeholder="Soy un super comentario..." onChange={(e) => {
+                    <textarea placeholder="Insertar comentario" onChange={(e) => {
                         let nuevo_comment = comment;
                         nuevo_comment.text = e.target.value;
                         setComment(nuevo_comment);
