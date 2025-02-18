@@ -77,11 +77,11 @@ CREATE TABLE `courses` (
 LOCK TABLES `courses` WRITE;
 /*!40000 ALTER TABLE `courses` DISABLE KEYS */;
 
-INSERT INTO `courses`  VALUES (4,'Curso de Programacion','Curso inicial de C++', '3 meses', 'Juan', NULL),
-(5,'Curso de Java','Curso Avanzado de C++', '6 meses', 'Julio', 'C++ Basico'), 
-(6,'Curso de Base de datos','Curso Inicial SQL', '9 meses', 'Leandro', 'MySQLWorkbench'), 
-(7,'Curso de Python','Curso Inicial de Python', '12 meses', 'Luis', 'Python Basico'), 
-(8,'Curso de C#','Curso Inicial de C#', '15 meses', 'Carlos', 'C# Basico');
+INSERT INTO `courses`  VALUES (4,'Curso de Programacion en C++','Aprende a programar en C++ desde 0', '3 meses', 'Juan Benitez', NULL),
+(5,'Curso de Java','Curso Avanzado de Java', '6 meses', 'Julio Martinez', 'Se requieren conocimientos basicos sobre Java'), 
+(6,'Curso de Base de datos','Curso Inicial SQL', '9 meses', 'Leandro Juarez', 'MySQLWorkbench, no se necesitan conocimientos previos'), 
+(7,'Curso de Python','Curso Inicial de Python', '12 meses', 'Lucía Gomez', 'Python Basico'), 
+(8,'Curso de C#','Curso Inicial de C#', '15 meses', 'Carlos Acosta', 'C# Basico');
 
 
 /*!40000 ALTER TABLE `courses` ENABLE KEYS */;
