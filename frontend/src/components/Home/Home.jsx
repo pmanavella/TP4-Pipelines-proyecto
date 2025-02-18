@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import swal from 'sweetalert2';
 import { useNavigate, useParams } from 'react-router-dom';
 import { FaUserAlt, FaLock, FaEnvelope } from "react-icons/fa";
+import "./Home.css";
 
 export default function Home() {
   const navigate = useNavigate();
