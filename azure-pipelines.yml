@@ -1,0 +1,35 @@
+name: ci-$(Date:yyyyMMdd)$(Rev:.r)
+trigger:
+  branches:
+    include:
+      - main
+pool:
+  name: SelfHosted
+
+jobs:
+- job: Build_Back
+  steps:
+  - checkout: self
+  - script: |
+      set -e
+      if [ -f go.mod ]; then SRCDIR=.
+      elif [ -f back/go.mod ]; then SRCDIR=back
+      else echo "No se encontró go.mod (raíz ni back/)"; exit 1; fi
+      if ! command -v go >/dev/null 2>&1; then brew install go || true; fi
+      cd "$SRCDIR"
+      go version
+      go mod download
+      go test ./...
+      mkdir -p build
+      go build -o build/cursos-api .
+      OUTDIR="$BUILD_SOURCESDIRECTORY/build"
+      mkdir -p "$OUTDIR"
+      cp build/cursos-api "$OUTDIR/"
+    displayName: test & build
+  - task: PublishBuildArtifacts@1
+    displayName: publicar artefacto
+    inputs:
+      PathtoPublish: 'build'
+      ArtifactName: 'back-build'
+      publishLocation: 'Container'
+
