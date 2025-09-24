@@ -1,11 +1,11 @@
-# Decisiones y pasos realizados — TP04 · Azure DevOps Pipelines (2025)
+# TP04 Azure DevOps Pipelines
 
 ## Resumen
 Configuré CI en **Azure DevOps** para una app con **Frontend (React/CRA)** y **Backend (Go)** usando un **agente Self-Hosted en macOS**. El pipeline compila ambos y publica los artefactos **frontend-build** y **back-build**. En mi Mac **ARM64**, el agente se ejecuta en **x64 mediante Rosetta** (no logré el paquete ARM nativo desde el modal de macOS).
 
 ---
 
-## Pasos realizados (con incidencias reales)
+## Pasos realizados
 
 1) **Creación del proyecto en ADO**  
    Azure DevOps → **New project** → *TP4-Pipelines* (privado, Git).
@@ -29,4 +29,15 @@ Configuré CI en **Azure DevOps** para una app con **Frontend (React/CRA)** y **
    xattr -r -d com.apple.quarantine .
    chmod +x ./config.sh ./bin/Agent.Listener ./svc.sh
    arch -x86_64 ./config.sh
+
+6) **Configuración del Token personal**  
+
+7) **Servicio del agente y verificación**  
+`./svc.sh start`
+`./svc.sh status`
+
+8) **Permisos del pool para la pipeline**
+La run quedaba en Waiting hasta que agregué el Build Service:
+SelfHosted → Security → Add → [TP4-Pipelines] Build Service (… ) → Role: Service Account.
+9) 
 
